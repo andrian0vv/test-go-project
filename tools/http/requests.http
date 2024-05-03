@@ -1,0 +1,25 @@
+### Create user
+POST {{host}}/api/users
+Content-Type: application/json
+
+{
+  "first_name": "ivan",
+  "last_name": "ivanov",
+  "age": 18,
+  "is_married": true,
+  "password": "12345678"
+}
+
+### Create order
+POST {{host}}/api/orders
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "products": [
+    {
+      "id": 1,
+      "quantity": 2
+    }
+  ]
+}

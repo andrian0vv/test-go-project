@@ -1,0 +1,29 @@
+linters:
+  disable-all: true
+  enable:
+    - revive
+    - govet
+    - errcheck
+    - ineffassign
+    - typecheck
+    - gosec
+    - gofumpt
+    - gosimple
+    - unused
+    - staticcheck
+    - gochecknoinits
+    - makezero
+    - whitespace
+
+linters-settings:
+  revive:
+    rules:
+      - name: var-naming # usually this is not critical
+        disabled: true
+  gosec:
+    excludes:
+      - G114
+
+run:
+  build-tags:
+    - integration
